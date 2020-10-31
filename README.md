@@ -1,6 +1,8 @@
 # HackTricks Modified 
 All server-side templating has been removed from the original HackTricks gitbook repo. This project can be run with the 'gitbook serve' command.
 
+Original author: https://github.com/carlospolop/hacktricks 
+
 
 
 ![](.gitbook/assets/portada-alcoholica.png)
