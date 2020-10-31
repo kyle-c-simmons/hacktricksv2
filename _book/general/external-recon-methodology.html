@@ -1,0 +1,5703 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>External Recon Methodology · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="about-the-author.html" />
+    
+    
+    <link rel="prev" href="pentesting-methodology.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    HackTricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="pentesting-methodology.html">
+            
+                <a href="pentesting-methodology.html">
+            
+                    
+                    Pentesting Methodology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="external-recon-methodology.html">
+            
+                <a href="external-recon-methodology.html">
+            
+                    
+                    External Recon Methodology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="about-the-author.html">
+            
+                <a href="about-the-author.html">
+            
+                    
+                    About the author
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="exfiltration.html">
+            
+                <a href="exfiltration.html">
+            
+                    
+                    Exfiltration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="tunneling-and-port-forwarding.html">
+            
+                <a href="tunneling-and-port-forwarding.html">
+            
+                    
+                    Tunneling and Port Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="brute-force.html">
+            
+                <a href="brute-force.html">
+            
+                    
+                    Brute Force - CheatSheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="search-exploits.html">
+            
+                <a href="search-exploits.html">
+            
+                    
+                    Search Exploits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Shells</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../shells/shells/">
+            
+                <a href="../shells/shells/">
+            
+                    
+                    Shells (Linux, Windows, MSFVenom)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../shells/shells/untitled.html">
+            
+                <a href="../shells/shells/untitled.html">
+            
+                    
+                    MSFVenom - CheatSheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../shells/shells/windows.html">
+            
+                <a href="../shells/shells/windows.html">
+            
+                    
+                    Shells - Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../shells/shells/linux.html">
+            
+                <a href="../shells/shells/linux.html">
+            
+                    
+                    Shells - Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../shells/shells/full-ttys.html">
+            
+                <a href="../shells/shells/full-ttys.html">
+            
+                    
+                    Full TTYs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux/Unix</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../linux-unix/linux-privilege-escalation-checklist.html">
+            
+                <a href="../linux-unix/linux-privilege-escalation-checklist.html">
+            
+                    
+                    Checklist - Linux Privilege Escalation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../linux-unix/privilege-escalation/">
+            
+                <a href="../linux-unix/privilege-escalation/">
+            
+                    
+                    Linux Privilege Escalation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../linux-unix/privilege-escalation/electron-cef-chromium-debugger-abuse.html">
+            
+                <a href="../linux-unix/privilege-escalation/electron-cef-chromium-debugger-abuse.html">
+            
+                    
+                    electron/CEF/chromium debugger abuse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../linux-unix/privilege-escalation/escaping-from-a-docker-container.html">
+            
+                <a href="../linux-unix/privilege-escalation/escaping-from-a-docker-container.html">
+            
+                    
+                    Escaping from a Docker container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../linux-unix/privilege-escalation/escaping-from-limited-bash.html">
+            
+                <a href="../linux-unix/privilege-escalation/escaping-from-limited-bash.html">
+            
+                    
+                    Escaping from restricted shells - Jails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../linux-unix/privilege-escalation/cisco-vmanage.html">
+            
+                <a href="../linux-unix/privilege-escalation/cisco-vmanage.html">
+            
+                    
+                    Cisco - vmanage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../linux-unix/privilege-escalation/d-bus-enumeration-and-command-injection-privilege-escalation.html">
+            
+                <a href="../linux-unix/privilege-escalation/d-bus-enumeration-and-command-injection-privilege-escalation.html">
+            
+                    
+                    D-Bus Enumeration & Command Injection Privilege Escalation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../linux-unix/privilege-escalation/interesting-groups-linux-pe/">
+            
+                <a href="../linux-unix/privilege-escalation/interesting-groups-linux-pe/">
+            
+                    
+                    Interesting Groups - Linux PE
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.6.1" data-path="../linux-unix/privilege-escalation/interesting-groups-linux-pe/lxd-privilege-escalation.html">
+            
+                <a href="../linux-unix/privilege-escalation/interesting-groups-linux-pe/lxd-privilege-escalation.html">
+            
+                    
+                    lxd/lxc Group - Privilege escalation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../linux-unix/privilege-escalation/ld.so.conf-example.html">
+            
+                <a href="../linux-unix/privilege-escalation/ld.so.conf-example.html">
+            
+                    
+                    ld.so exploit example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../linux-unix/privilege-escalation/linux-capabilities.html">
+            
+                <a href="../linux-unix/privilege-escalation/linux-capabilities.html">
+            
+                    
+                    Linux Capabilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../linux-unix/privilege-escalation/nfs-no_root_squash-misconfiguration-pe.html">
+            
+                <a href="../linux-unix/privilege-escalation/nfs-no_root_squash-misconfiguration-pe.html">
+            
+                    
+                    NFS no_root_squash/no_all_squash misconfiguration PE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../linux-unix/privilege-escalation/ssh-forward-agent-exploitation.html">
+            
+                <a href="../linux-unix/privilege-escalation/ssh-forward-agent-exploitation.html">
+            
+                    
+                    SSH Forward Agent exploitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.11" data-path="../linux-unix/privilege-escalation/socket-command-injection.html">
+            
+                <a href="../linux-unix/privilege-escalation/socket-command-injection.html">
+            
+                    
+                    Socket Command Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.12" data-path="../linux-unix/privilege-escalation/payloads-to-execute.html">
+            
+                <a href="../linux-unix/privilege-escalation/payloads-to-execute.html">
+            
+                    
+                    Payloads to execute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.13" data-path="../linux-unix/privilege-escalation/wildcards-spare-tricks.html">
+            
+                <a href="../linux-unix/privilege-escalation/wildcards-spare-tricks.html">
+            
+                    
+                    Wildcards Spare tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../linux-unix/useful-linux-commands/">
+            
+                <a href="../linux-unix/useful-linux-commands/">
+            
+                    
+                    Useful Linux Commands
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../linux-unix/useful-linux-commands/bypass-bash-restrictions.html">
+            
+                <a href="../linux-unix/useful-linux-commands/bypass-bash-restrictions.html">
+            
+                    
+                    Bypass Bash Restrictions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../linux-unix/linux-environment-variables.html">
+            
+                <a href="../linux-unix/linux-environment-variables.html">
+            
+                    
+                    Linux Environment Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Windows</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../windows/checklist-windows-privilege-escalation.html">
+            
+                <a href="../windows/checklist-windows-privilege-escalation.html">
+            
+                    
+                    Checklist - Local Windows Privilege Escalation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../windows/windows-local-privilege-escalation/">
+            
+                <a href="../windows/windows-local-privilege-escalation/">
+            
+                    
+                    Windows Local Privilege Escalation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../windows/windows-local-privilege-escalation/dpapi-extracting-passwords.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/dpapi-extracting-passwords.html">
+            
+                    
+                    DPAPI - Extracting Passwords
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../windows/windows-local-privilege-escalation/seimpersonate-from-high-to-system.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/seimpersonate-from-high-to-system.html">
+            
+                    
+                    SeImpersonate from High To System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../windows/windows-local-privilege-escalation/access-tokens.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/access-tokens.html">
+            
+                    
+                    Access Tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../windows/windows-local-privilege-escalation/acls-dacls-sacls-aces.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/acls-dacls-sacls-aces.html">
+            
+                    
+                    ACLs - DACLs/SACLs/ACEs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../windows/windows-local-privilege-escalation/dll-hijacking.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/dll-hijacking.html">
+            
+                    
+                    Dll Hijacking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../windows/windows-local-privilege-escalation/from-high-integrity-to-system-with-name-pipes.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/from-high-integrity-to-system-with-name-pipes.html">
+            
+                    
+                    From High Integrity to SYSTEM with Name Pipes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../windows/windows-local-privilege-escalation/integrity-levels.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/integrity-levels.html">
+            
+                    
+                    Integrity Levels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.8" data-path="../windows/windows-local-privilege-escalation/jaws.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/jaws.html">
+            
+                    
+                    JAWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.9" data-path="../windows/windows-local-privilege-escalation/juicypotato.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/juicypotato.html">
+            
+                    
+                    JuicyPotato
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.10" data-path="../windows/windows-local-privilege-escalation/leaked-handle-exploitation.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/leaked-handle-exploitation.html">
+            
+                    
+                    Leaked Handle Exploitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.11" data-path="../windows/windows-local-privilege-escalation/msi-wrapper.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/msi-wrapper.html">
+            
+                    
+                    MSI Wrapper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.12" data-path="../windows/windows-local-privilege-escalation/named-pipe-client-impersonation.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/named-pipe-client-impersonation.html">
+            
+                    
+                    Named Pipe Client Impersonation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.13" data-path="../windows/windows-local-privilege-escalation/powerup.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/powerup.html">
+            
+                    
+                    PowerUp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.14" data-path="../windows/windows-local-privilege-escalation/privilege-escalation-abusing-tokens.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/privilege-escalation-abusing-tokens.html">
+            
+                    
+                    Privilege Escalation Abusing Tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.15" data-path="../windows/windows-local-privilege-escalation/privilege-escalation-with-autorun-binaries.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/privilege-escalation-with-autorun-binaries.html">
+            
+                    
+                    Privilege Escalation with Autoruns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.16" data-path="../windows/windows-local-privilege-escalation/rottenpotato.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/rottenpotato.html">
+            
+                    
+                    RottenPotato
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.17" data-path="../windows/windows-local-privilege-escalation/seatbelt.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/seatbelt.html">
+            
+                    
+                    Seatbelt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.18" data-path="../windows/windows-local-privilege-escalation/sedebug-+-seimpersonate-copy-token.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/sedebug-+-seimpersonate-copy-token.html">
+            
+                    
+                    SeDebug + SeImpersonate copy token
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.19" data-path="../windows/windows-local-privilege-escalation/windows-c-payloads.html">
+            
+                <a href="../windows/windows-local-privilege-escalation/windows-c-payloads.html">
+            
+                    
+                    Windows C Payloads
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../windows/active-directory-methodology/">
+            
+                <a href="../windows/active-directory-methodology/">
+            
+                    
+                    Active Directory Methodology
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../windows/active-directory-methodology/acl-persistence-abuse.html">
+            
+                <a href="../windows/active-directory-methodology/acl-persistence-abuse.html">
+            
+                    
+                    Abusing Active Directory ACLs/ACEs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../windows/active-directory-methodology/ad-information-in-printers.html">
+            
+                <a href="../windows/active-directory-methodology/ad-information-in-printers.html">
+            
+                    
+                    AD information in printers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../windows/active-directory-methodology/asreproast.html">
+            
+                <a href="../windows/active-directory-methodology/asreproast.html">
+            
+                    
+                    ASREPRoast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../windows/active-directory-methodology/bloodhound.html">
+            
+                <a href="../windows/active-directory-methodology/bloodhound.html">
+            
+                    
+                    BloodHound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../windows/active-directory-methodology/constrained-delegation.html">
+            
+                <a href="../windows/active-directory-methodology/constrained-delegation.html">
+            
+                    
+                    Constrained Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="../windows/active-directory-methodology/custom-ssp.html">
+            
+                <a href="../windows/active-directory-methodology/custom-ssp.html">
+            
+                    
+                    Custom SSP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.7" data-path="../windows/active-directory-methodology/dcshadow.html">
+            
+                <a href="../windows/active-directory-methodology/dcshadow.html">
+            
+                    
+                    DCShadow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.8" data-path="../windows/active-directory-methodology/dcsync.html">
+            
+                <a href="../windows/active-directory-methodology/dcsync.html">
+            
+                    
+                    DCSync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.9" data-path="../windows/active-directory-methodology/dsrm-credentials.html">
+            
+                <a href="../windows/active-directory-methodology/dsrm-credentials.html">
+            
+                    
+                    DSRM Credentials
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.10" data-path="../windows/active-directory-methodology/golden-ticket.html">
+            
+                <a href="../windows/active-directory-methodology/golden-ticket.html">
+            
+                    
+                    Golden Ticket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.11" data-path="../windows/active-directory-methodology/kerberos-authentication.html">
+            
+                <a href="../windows/active-directory-methodology/kerberos-authentication.html">
+            
+                    
+                    Kerberos Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.12" data-path="../windows/active-directory-methodology/kerberoast.html">
+            
+                <a href="../windows/active-directory-methodology/kerberoast.html">
+            
+                    
+                    Kerberoast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.13" data-path="../windows/active-directory-methodology/mssql-trusted-links.html">
+            
+                <a href="../windows/active-directory-methodology/mssql-trusted-links.html">
+            
+                    
+                    MSSQL Trusted Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.14" data-path="../windows/active-directory-methodology/over-pass-the-hash-pass-the-key.html">
+            
+                <a href="../windows/active-directory-methodology/over-pass-the-hash-pass-the-key.html">
+            
+                    
+                    Over Pass the Hash/Pass the Key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.15" data-path="../windows/active-directory-methodology/pass-the-ticket.html">
+            
+                <a href="../windows/active-directory-methodology/pass-the-ticket.html">
+            
+                    
+                    Pass the Ticket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.16" data-path="../windows/active-directory-methodology/password-spraying.html">
+            
+                <a href="../windows/active-directory-methodology/password-spraying.html">
+            
+                    
+                    Password Spraying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.17" data-path="../windows/active-directory-methodology/printers-spooler-service-abuse.html">
+            
+                <a href="../windows/active-directory-methodology/printers-spooler-service-abuse.html">
+            
+                    
+                    Printers Spooler Service abuse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.18" data-path="../windows/active-directory-methodology/privileged-accounts-and-token-privileges.html">
+            
+                <a href="../windows/active-directory-methodology/privileged-accounts-and-token-privileges.html">
+            
+                    
+                    Privileged Accounts and Token Privileges
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.19" data-path="../windows/active-directory-methodology/resource-based-constrained-delegation.html">
+            
+                <a href="../windows/active-directory-methodology/resource-based-constrained-delegation.html">
+            
+                    
+                    Resource-based Constrained Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.20" data-path="../windows/active-directory-methodology/security-descriptors.html">
+            
+                <a href="../windows/active-directory-methodology/security-descriptors.html">
+            
+                    
+                    Security Descriptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.21" data-path="../windows/active-directory-methodology/silver-ticket.html">
+            
+                <a href="../windows/active-directory-methodology/silver-ticket.html">
+            
+                    
+                    Silver Ticket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.22" data-path="../windows/active-directory-methodology/skeleton-key.html">
+            
+                <a href="../windows/active-directory-methodology/skeleton-key.html">
+            
+                    
+                    Skeleton Key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.23" data-path="../windows/active-directory-methodology/unconstrained-delegation.html">
+            
+                <a href="../windows/active-directory-methodology/unconstrained-delegation.html">
+            
+                    
+                    Unconstrained Delegation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../windows/ntlm/">
+            
+                <a href="../windows/ntlm/">
+            
+                    
+                    NTLM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../windows/ntlm/places-to-steal-ntlm-creds.html">
+            
+                <a href="../windows/ntlm/places-to-steal-ntlm-creds.html">
+            
+                    
+                    Places to steal NTLM creds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../windows/ntlm/psexec-and-winexec.html">
+            
+                <a href="../windows/ntlm/psexec-and-winexec.html">
+            
+                    
+                    PsExec/Winexec/ScExec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.3" data-path="../windows/ntlm/smbexec.html">
+            
+                <a href="../windows/ntlm/smbexec.html">
+            
+                    
+                    SmbExec/ScExec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.4" data-path="../windows/ntlm/wmicexec.html">
+            
+                <a href="../windows/ntlm/wmicexec.html">
+            
+                    
+                    WmicExec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.5" data-path="../windows/ntlm/atexec.html">
+            
+                <a href="../windows/ntlm/atexec.html">
+            
+                    
+                    AtExec / SchtasksExec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.6" data-path="../windows/ntlm/winrm.html">
+            
+                <a href="../windows/ntlm/winrm.html">
+            
+                    
+                    WinRM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../windows/stealing-credentials/">
+            
+                <a href="../windows/stealing-credentials/">
+            
+                    
+                    Stealing Credentials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../windows/stealing-credentials/credentials-protections.html">
+            
+                <a href="../windows/stealing-credentials/credentials-protections.html">
+            
+                    
+                    Credentials Protections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../windows/stealing-credentials/credentials-mimikatz.html">
+            
+                <a href="../windows/stealing-credentials/credentials-mimikatz.html">
+            
+                    
+                    Mimikatz
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../windows/authentication-credentials-uac-and-efs.html">
+            
+                <a href="../windows/authentication-credentials-uac-and-efs.html">
+            
+                    
+                    Authentication, Credentials, UAC and EFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../windows/basic-cmd-for-pentesters.html">
+            
+                <a href="../windows/basic-cmd-for-pentesters.html">
+            
+                    
+                    Basic CMD for Pentesters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../windows/basic-powershell-for-pentesters/">
+            
+                <a href="../windows/basic-powershell-for-pentesters/">
+            
+                    
+                    Basic PowerShell for Pentesters
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.8.1" data-path="../windows/basic-powershell-for-pentesters/powerview.html">
+            
+                <a href="../windows/basic-powershell-for-pentesters/powerview.html">
+            
+                    
+                    PowerView
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../windows/av-bypass.html">
+            
+                <a href="../windows/av-bypass.html">
+            
+                    
+                    AV Bypass
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Mobile Apps Pentesting</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../mobile-apps-pentesting/android-checklist.md">
+            
+                <span>
+            
+                    
+                    Android APK Checklist
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../mobile-apps-pentesting/android-app-pentesting/">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/">
+            
+                    
+                    Android Applications Pentesting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../mobile-apps-pentesting/android-app-pentesting/adb-commands.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/adb-commands.html">
+            
+                    
+                    ADB Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../mobile-apps-pentesting/android-app-pentesting/apk-decompilers.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/apk-decompilers.html">
+            
+                    
+                    APK decompilers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../mobile-apps-pentesting/android-app-pentesting/avd-android-virtual-device.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/avd-android-virtual-device.html">
+            
+                    
+                    AVD - Android Virtual Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../mobile-apps-pentesting/android-app-pentesting/android-burp-suite-settings.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/android-burp-suite-settings.html">
+            
+                    
+                    Burp Suite Configuration for Android
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.5" data-path="../mobile-apps-pentesting/android-app-pentesting/drozer-tutorial/">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/drozer-tutorial/">
+            
+                    
+                    Drozer Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.5.1" data-path="../mobile-apps-pentesting/android-app-pentesting/drozer-tutorial/exploiting-content-providers.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/drozer-tutorial/exploiting-content-providers.html">
+            
+                    
+                    Exploiting Content Providers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6" data-path="../mobile-apps-pentesting/android-app-pentesting/exploiting-a-debuggeable-applciation.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/exploiting-a-debuggeable-applciation.html">
+            
+                    
+                    Exploiting a debuggeable applciation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7" data-path="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/">
+            
+                    
+                    Frida Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.7.1" data-path="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-1.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-1.html">
+            
+                    
+                    Frida Tutorial 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7.2" data-path="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-2.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-2.html">
+            
+                    
+                    Frida Tutorial 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7.3" data-path="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/owaspuncrackable-1.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/owaspuncrackable-1.html">
+            
+                    
+                    Frida Tutorial 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7.4" data-path="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/objection-tutorial.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/frida-tutorial/objection-tutorial.html">
+            
+                    
+                    Objection Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8" data-path="../mobile-apps-pentesting/android-app-pentesting/google-ctf-2018-shall-we-play-a-game.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/google-ctf-2018-shall-we-play-a-game.html">
+            
+                    
+                    Google CTF 2018 - Shall We Play a Game?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.9" data-path="../mobile-apps-pentesting/android-app-pentesting/make-apk-accept-ca-certificate.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/make-apk-accept-ca-certificate.html">
+            
+                    
+                    Make APK Accept CA Certificate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.10" data-path="../mobile-apps-pentesting/android-app-pentesting/manual-deobfuscation.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/manual-deobfuscation.html">
+            
+                    
+                    Manual DeObfuscation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.11" data-path="../mobile-apps-pentesting/android-app-pentesting/reversing-native-libraries.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/reversing-native-libraries.html">
+            
+                    
+                    Reversing Native Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.12" data-path="../mobile-apps-pentesting/android-app-pentesting/smali-changes.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/smali-changes.html">
+            
+                    
+                    Smali - Decompiling/[Modifying]/Compiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.13" data-path="../mobile-apps-pentesting/android-app-pentesting/spoofing-your-location-in-play-store.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/spoofing-your-location-in-play-store.html">
+            
+                    
+                    Spoofing your location in Play Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.14" data-path="../mobile-apps-pentesting/android-app-pentesting/webview-attacks.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/webview-attacks.html">
+            
+                    
+                    Webview Attacks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.15" data-path="../mobile-apps-pentesting/android-app-pentesting/what-are-intents.html">
+            
+                <a href="../mobile-apps-pentesting/android-app-pentesting/what-are-intents.html">
+            
+                    
+                    What are Intents
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Pentesting</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../pentesting/pentesting-network/">
+            
+                <a href="../pentesting/pentesting-network/">
+            
+                    
+                    Pentesting Network
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../pentesting/pentesting-network/spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks.html">
+            
+                <a href="../pentesting/pentesting-network/spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks.html">
+            
+                    
+                    Spoofing LLMNR, NBT-NS, mDNS/DNS and WPAD and Relay Attacks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../pentesting/pentesting-network/spoofing-ssdp-and-upnp-devices.html">
+            
+                <a href="../pentesting/pentesting-network/spoofing-ssdp-and-upnp-devices.html">
+            
+                    
+                    Spoofing SSDP and UPnP Devices with EvilSSDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../pentesting/pentesting-network/wifi-attacks/">
+            
+                <a href="../pentesting/pentesting-network/wifi-attacks/">
+            
+                    
+                    Wifi Attacks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../pentesting/pentesting-network/wifi-attacks/evil-twin-eap-tls.html">
+            
+                <a href="../pentesting/pentesting-network/wifi-attacks/evil-twin-eap-tls.html">
+            
+                    
+                    Evil Twin EAP-TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../pentesting/pentesting-network/pentesting-ipv6.html">
+            
+                <a href="../pentesting/pentesting-network/pentesting-ipv6.html">
+            
+                    
+                    Pentesting IPv6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../pentesting/pentesting-network/nmap-summary-esp.html">
+            
+                <a href="../pentesting/pentesting-network/nmap-summary-esp.html">
+            
+                    
+                    Nmap Summary (ESP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="../pentesting/pentesting-network/network-protocols-explained-esp.html">
+            
+                <a href="../pentesting/pentesting-network/network-protocols-explained-esp.html">
+            
+                    
+                    Network Protocols Explained (ESP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="../pentesting/pentesting-network/ids-evasion.html">
+            
+                <a href="../pentesting/pentesting-network/ids-evasion.html">
+            
+                    
+                    IDS and IPS Evasion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.8" data-path="../pentesting/pentesting-network/dhcpv6.html">
+            
+                <a href="../pentesting/pentesting-network/dhcpv6.html">
+            
+                    
+                    DHCPv6
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../pentesting/pentesting-jdwp-java-debug-wire-protocol.html">
+            
+                <a href="../pentesting/pentesting-jdwp-java-debug-wire-protocol.html">
+            
+                    
+                    Pentesting JDWP - Java Debug Wire Protocol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../pentesting/pentesting-printers/">
+            
+                <a href="../pentesting/pentesting-printers/">
+            
+                    
+                    Pentesting Printers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../pentesting/pentesting-printers/accounting-bypass.html">
+            
+                <a href="../pentesting/pentesting-printers/accounting-bypass.html">
+            
+                    
+                    Accounting bypass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../pentesting/pentesting-printers/buffer-overflows.html">
+            
+                <a href="../pentesting/pentesting-printers/buffer-overflows.html">
+            
+                    
+                    Buffer Overflows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="../pentesting/pentesting-printers/credentials-disclosure-brute-force.html">
+            
+                <a href="../pentesting/pentesting-printers/credentials-disclosure-brute-force.html">
+            
+                    
+                    Credentials Disclosure / Brute-Force
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.4" data-path="../pentesting/pentesting-printers/cross-site-printing.html">
+            
+                <a href="../pentesting/pentesting-printers/cross-site-printing.html">
+            
+                    
+                    Cross-Site Printing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.5" data-path="../pentesting/pentesting-printers/document-processing.html">
+            
+                <a href="../pentesting/pentesting-printers/document-processing.html">
+            
+                    
+                    Document Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.6" data-path="../pentesting/pentesting-printers/factory-defaults.html">
+            
+                <a href="../pentesting/pentesting-printers/factory-defaults.html">
+            
+                    
+                    Factory Defaults
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.7" data-path="../pentesting/pentesting-printers/file-system-access.html">
+            
+                <a href="../pentesting/pentesting-printers/file-system-access.html">
+            
+                    
+                    File system access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.8" data-path="../pentesting/pentesting-printers/firmware-updates.html">
+            
+                <a href="../pentesting/pentesting-printers/firmware-updates.html">
+            
+                    
+                    Firmware updates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.9" data-path="../pentesting/pentesting-printers/memory-access.html">
+            
+                <a href="../pentesting/pentesting-printers/memory-access.html">
+            
+                    
+                    Memory Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.10" data-path="../pentesting/pentesting-printers/physical-damage.html">
+            
+                <a href="../pentesting/pentesting-printers/physical-damage.html">
+            
+                    
+                    Physical Damage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.11" data-path="../pentesting/pentesting-printers/software-packages.html">
+            
+                <a href="../pentesting/pentesting-printers/software-packages.html">
+            
+                    
+                    Software packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.12" data-path="../pentesting/pentesting-printers/transmission-channel.html">
+            
+                <a href="../pentesting/pentesting-printers/transmission-channel.html">
+            
+                    
+                    Transmission channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.13" data-path="../pentesting/pentesting-printers/print-job-manipulation.html">
+            
+                <a href="../pentesting/pentesting-printers/print-job-manipulation.html">
+            
+                    
+                    Print job manipulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.14" data-path="../pentesting/pentesting-printers/print-job-retention.html">
+            
+                <a href="../pentesting/pentesting-printers/print-job-retention.html">
+            
+                    
+                    Print Job Retention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.15" data-path="../pentesting/pentesting-printers/scanner-and-fax.html">
+            
+                <a href="../pentesting/pentesting-printers/scanner-and-fax.html">
+            
+                    
+                    Scanner and Fax
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../pentesting/7-tcp-udp-pentesting-echo.html">
+            
+                <a href="../pentesting/7-tcp-udp-pentesting-echo.html">
+            
+                    
+                    7/tcp/udp - Pentesting Echo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../pentesting/pentesting-ftp/">
+            
+                <a href="../pentesting/pentesting-ftp/">
+            
+                    
+                    21 - Pentesting FTP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.5.1" data-path="../pentesting/pentesting-ftp/ftp-bounce-attack.html">
+            
+                <a href="../pentesting/pentesting-ftp/ftp-bounce-attack.html">
+            
+                    
+                    FTP Bounce attack - Scan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.2" data-path="../pentesting/pentesting-ftp/ftp-bounce-download-2oftp-file.html">
+            
+                <a href="../pentesting/pentesting-ftp/ftp-bounce-download-2oftp-file.html">
+            
+                    
+                    FTP Bounce - Download 2ºFTP file
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../pentesting/pentesting-ssh.html">
+            
+                <a href="../pentesting/pentesting-ssh.html">
+            
+                    
+                    22 - Pentesting SSH/SFTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../pentesting/pentesting-telnet.html">
+            
+                <a href="../pentesting/pentesting-telnet.html">
+            
+                    
+                    23 - Pentesting Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../pentesting/pentesting-smtp/">
+            
+                <a href="../pentesting/pentesting-smtp/">
+            
+                    
+                    25,465,587 - Pentesting SMTP/s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.8.1" data-path="../pentesting/pentesting-smtp/smtp-commands.html">
+            
+                <a href="../pentesting/pentesting-smtp/smtp-commands.html">
+            
+                    
+                    SMTP - Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="../pentesting/43-pentesting-whois.html">
+            
+                <a href="../pentesting/43-pentesting-whois.html">
+            
+                    
+                    43 - Pentesting WHOIS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="../pentesting/pentesting-dns.html">
+            
+                <a href="../pentesting/pentesting-dns.html">
+            
+                    
+                    53 - Pentesting DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="../pentesting/69-udp-tftp.html">
+            
+                <a href="../pentesting/69-udp-tftp.html">
+            
+                    
+                    69/UDP TFTP/Bittorrent-tracker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.12" data-path="../pentesting/pentesting-finger.html">
+            
+                <a href="../pentesting/pentesting-finger.html">
+            
+                    
+                    79 - Pentesting Finger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13" data-path="../pentesting/pentesting-web/">
+            
+                <a href="../pentesting/pentesting-web/">
+            
+                    
+                    80,443 - Pentesting Web Methodology
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.13.1" data-path="../pentesting/pentesting-web/spring-actuators.html">
+            
+                <a href="../pentesting/pentesting-web/spring-actuators.html">
+            
+                    
+                    Spring Actuators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.2" data-path="../pentesting/pentesting-web/artifactory-hacking-guide.html">
+            
+                <a href="../pentesting/pentesting-web/artifactory-hacking-guide.html">
+            
+                    
+                    Artifactory Hacking guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.3" data-path="../pentesting/pentesting-web/apache.html">
+            
+                <a href="../pentesting/pentesting-web/apache.html">
+            
+                    
+                    Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.4" data-path="../pentesting/pentesting-web/jsp.html">
+            
+                <a href="../pentesting/pentesting-web/jsp.html">
+            
+                    
+                    JSP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.5" data-path="../pentesting/pentesting-web/api-pentesting.html">
+            
+                <a href="../pentesting/pentesting-web/api-pentesting.html">
+            
+                    
+                    API Pentesting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.6" data-path="../pentesting/pentesting-web/buckets/">
+            
+                <a href="../pentesting/pentesting-web/buckets/">
+            
+                    
+                    Buckets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.13.6.1" data-path="../pentesting/pentesting-web/buckets/firebase-database.html">
+            
+                <a href="../pentesting/pentesting-web/buckets/firebase-database.html">
+            
+                    
+                    Firebase Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.6.2" data-path="../pentesting/pentesting-web/buckets/aws-s3.html">
+            
+                <a href="../pentesting/pentesting-web/buckets/aws-s3.html">
+            
+                    
+                    AWS-S3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.7" data-path="../pentesting/pentesting-web/cgi.html">
+            
+                <a href="../pentesting/pentesting-web/cgi.html">
+            
+                    
+                    CGI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.8" data-path="../pentesting/pentesting-web/drupal.html">
+            
+                <a href="../pentesting/pentesting-web/drupal.html">
+            
+                    
+                    Drupal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.9" data-path="../pentesting/pentesting-web/flask.html">
+            
+                <a href="../pentesting/pentesting-web/flask.html">
+            
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.10" data-path="../pentesting/pentesting-web/git.html">
+            
+                <a href="../pentesting/pentesting-web/git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.11" data-path="../pentesting/pentesting-web/graphql.html">
+            
+                <a href="../pentesting/pentesting-web/graphql.html">
+            
+                    
+                    GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.12" data-path="../pentesting/pentesting-web/h2-java-sql-database.html">
+            
+                <a href="../pentesting/pentesting-web/h2-java-sql-database.html">
+            
+                    
+                    H2 - Java SQL database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.13" data-path="../pentesting/pentesting-web/iis-internet-information-services.html">
+            
+                <a href="../pentesting/pentesting-web/iis-internet-information-services.html">
+            
+                    
+                    IIS - Internet Information Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.14" data-path="../pentesting/pentesting-web/jboss.html">
+            
+                <a href="../pentesting/pentesting-web/jboss.html">
+            
+                    
+                    JBOSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.15" data-path="../pentesting/pentesting-web/jenkins.html">
+            
+                <a href="../pentesting/pentesting-web/jenkins.html">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.16" data-path="../pentesting/pentesting-web/jira.html">
+            
+                <a href="../pentesting/pentesting-web/jira.html">
+            
+                    
+                    JIRA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.17" data-path="../pentesting/pentesting-web/joomla.html">
+            
+                <a href="../pentesting/pentesting-web/joomla.html">
+            
+                    
+                    Joomla
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.18" data-path="../pentesting/pentesting-web/nginx.html">
+            
+                <a href="../pentesting/pentesting-web/nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.19" data-path="../pentesting/pentesting-web/php-tricks-esp/">
+            
+                <a href="../pentesting/pentesting-web/php-tricks-esp/">
+            
+                    
+                    PHP Tricks (SPA)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.13.19.1" data-path="../pentesting/pentesting-web/php-tricks-esp/php-useful-functions.html">
+            
+                <a href="../pentesting/pentesting-web/php-tricks-esp/php-useful-functions.html">
+            
+                    
+                    PHP - Useful Functions (disabled bypass)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.20" data-path="../pentesting/pentesting-web/python.html">
+            
+                <a href="../pentesting/pentesting-web/python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.21" data-path="../pentesting/pentesting-web/spel-spring-expression-language.html">
+            
+                <a href="../pentesting/pentesting-web/spel-spring-expression-language.html">
+            
+                    
+                    SpEL - Spring Expression Language
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.22" data-path="../pentesting/pentesting-web/tomcat.html">
+            
+                <a href="../pentesting/pentesting-web/tomcat.html">
+            
+                    
+                    Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.23" data-path="../pentesting/pentesting-web/vmware-esx-vcenter....html">
+            
+                <a href="../pentesting/pentesting-web/vmware-esx-vcenter....html">
+            
+                    
+                    VMWare (ESX, VCenter...)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.24" data-path="../pentesting/pentesting-web/put-method-webdav.html">
+            
+                <a href="../pentesting/pentesting-web/put-method-webdav.html">
+            
+                    
+                    WebDav
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.25" data-path="../pentesting/pentesting-web/werkzeug.html">
+            
+                <a href="../pentesting/pentesting-web/werkzeug.html">
+            
+                    
+                    werkzeug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13.26" data-path="../pentesting/pentesting-web/wordpress.html">
+            
+                <a href="../pentesting/pentesting-web/wordpress.html">
+            
+                    
+                    Wordpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.14" data-path="../pentesting/pentesting-kerberos-88/">
+            
+                <a href="../pentesting/pentesting-kerberos-88/">
+            
+                    
+                    88tcp/udp - Pentesting Kerberos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.14.1" data-path="../pentesting/pentesting-kerberos-88/harvesting-tickets-from-windows.html">
+            
+                <a href="../pentesting/pentesting-kerberos-88/harvesting-tickets-from-windows.html">
+            
+                    
+                    Harvesting tickets from Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.14.2" data-path="../pentesting/pentesting-kerberos-88/harvesting-tickets-from-linux.html">
+            
+                <a href="../pentesting/pentesting-kerberos-88/harvesting-tickets-from-linux.html">
+            
+                    
+                    Harvesting tickets from Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.15" data-path="../pentesting/pentesting-pop.html">
+            
+                <a href="../pentesting/pentesting-pop.html">
+            
+                    
+                    110,995 - Pentesting POP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.16" data-path="../pentesting/pentesting-rpcbind.html">
+            
+                <a href="../pentesting/pentesting-rpcbind.html">
+            
+                    
+                    111/TCP/UDP - Pentesting Portmapper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.17" data-path="../pentesting/113-pentesting-ident.html">
+            
+                <a href="../pentesting/113-pentesting-ident.html">
+            
+                    
+                    113 - Pentesting Ident
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.18" data-path="../pentesting/pentesting-ntp.html">
+            
+                <a href="../pentesting/pentesting-ntp.html">
+            
+                    
+                    123/udp - Pentesting NTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.19" data-path="../pentesting/135-pentesting-msrpc.html">
+            
+                <a href="../pentesting/135-pentesting-msrpc.html">
+            
+                    
+                    135, 593 - Pentesting MSRPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.20" data-path="../pentesting/137-138-139-pentesting-netbios.html">
+            
+                <a href="../pentesting/137-138-139-pentesting-netbios.html">
+            
+                    
+                    137,138,139 - Pentesting NetBios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.21" data-path="../pentesting/pentesting-smb.html">
+            
+                <a href="../pentesting/pentesting-smb.html">
+            
+                    
+                    139,445 - Pentesting SMB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.22" data-path="../pentesting/pentesting-imap.html">
+            
+                <a href="../pentesting/pentesting-imap.html">
+            
+                    
+                    143,993 - Pentesting IMAP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.23" data-path="../pentesting/pentesting-snmp.html">
+            
+                <a href="../pentesting/pentesting-snmp.html">
+            
+                    
+                    161,162,10161,10162/udp - Pentesting SNMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.24" data-path="../pentesting/pentesting-irc.html">
+            
+                <a href="../pentesting/pentesting-irc.html">
+            
+                    
+                    194,6667,6660-7000 - Pentesting IRC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.25" data-path="../pentesting/pentesting-264-check-point-firewall-1.html">
+            
+                <a href="../pentesting/pentesting-264-check-point-firewall-1.html">
+            
+                    
+                    264 - Pentesting Check Point FireWall-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.26" data-path="../pentesting/pentesting-ldap.html">
+            
+                <a href="../pentesting/pentesting-ldap.html">
+            
+                    
+                    389, 636, 3268, 3269 - Pentesting LDAP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.27" data-path="../pentesting/ipsec-ike-vpn-pentesting.html">
+            
+                <a href="../pentesting/ipsec-ike-vpn-pentesting.html">
+            
+                    
+                    500/udp - Pentesting IPsec/IKE VPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.28" data-path="../pentesting/pentesting-modbus.html">
+            
+                <a href="../pentesting/pentesting-modbus.html">
+            
+                    
+                    502 - Pentesting Modbus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.29" data-path="../pentesting/512-pentesting-rexec.html">
+            
+                <a href="../pentesting/512-pentesting-rexec.html">
+            
+                    
+                    512 - Pentesting Rexec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.30" data-path="../pentesting/pentesting-rlogin.html">
+            
+                <a href="../pentesting/pentesting-rlogin.html">
+            
+                    
+                    513 - Pentesting Rlogin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.31" data-path="../pentesting/pentesting-rsh.html">
+            
+                <a href="../pentesting/pentesting-rsh.html">
+            
+                    
+                    514 - Pentesting Rsh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.32" data-path="../pentesting/515-pentesting-line-printer-daemon-lpd.html">
+            
+                <a href="../pentesting/515-pentesting-line-printer-daemon-lpd.html">
+            
+                    
+                    515 - Pentesting Line Printer Daemon (LPD)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.33" data-path="../pentesting/584-pentesting-afp.html">
+            
+                <a href="../pentesting/584-pentesting-afp.html">
+            
+                    
+                    548 - Pentesting Apple Filing Protocol (AFP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.34" data-path="../pentesting/554-8554-pentesting-rtsp.html">
+            
+                <a href="../pentesting/554-8554-pentesting-rtsp.html">
+            
+                    
+                    554,8554 - Pentesting RTSP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.35" data-path="../pentesting/623-udp-ipmi.html">
+            
+                <a href="../pentesting/623-udp-ipmi.html">
+            
+                    
+                    623/UDP/TCP - IPMI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.36" data-path="../pentesting/pentesting-631-internet-printing-protocol-ipp.html">
+            
+                <a href="../pentesting/pentesting-631-internet-printing-protocol-ipp.html">
+            
+                    
+                    631 - Internet Printing Protocol(IPP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.37" data-path="../pentesting/873-pentesting-rsync.html">
+            
+                <a href="../pentesting/873-pentesting-rsync.html">
+            
+                    
+                    873 - Pentesting Rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.38" data-path="../pentesting/1026-pentesting-rusersd.html">
+            
+                <a href="../pentesting/1026-pentesting-rusersd.html">
+            
+                    
+                    1026 - Pentesting Rusersd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.39" data-path="../pentesting/1099-pentesting-java-rmi.html">
+            
+                <a href="../pentesting/1099-pentesting-java-rmi.html">
+            
+                    
+                    1098/1099 - Pentesting Java RMI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.40" data-path="../pentesting/pentesting-mssql-microsoft-sql-server.html">
+            
+                <a href="../pentesting/pentesting-mssql-microsoft-sql-server.html">
+            
+                    
+                    1433 - Pentesting MSSQL - Microsoft SQL Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.41" data-path="../pentesting/1521-1522-1529-pentesting-oracle-listener/">
+            
+                <a href="../pentesting/1521-1522-1529-pentesting-oracle-listener/">
+            
+                    
+                    1521,1522-1529 - Pentesting Oracle TNS Listener
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.41.1" data-path="../pentesting/1521-1522-1529-pentesting-oracle-listener/oracle-pentesting-requirements-installation.html">
+            
+                <a href="../pentesting/1521-1522-1529-pentesting-oracle-listener/oracle-pentesting-requirements-installation.html">
+            
+                    
+                    Oracle Pentesting requirements installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.41.2" data-path="../pentesting/1521-1522-1529-pentesting-oracle-listener/tns-poison.html">
+            
+                <a href="../pentesting/1521-1522-1529-pentesting-oracle-listener/tns-poison.html">
+            
+                    
+                    TNS Poison
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.41.3" data-path="../pentesting/1521-1522-1529-pentesting-oracle-listener/remote-stealth-pass-brute-force.html">
+            
+                <a href="../pentesting/1521-1522-1529-pentesting-oracle-listener/remote-stealth-pass-brute-force.html">
+            
+                    
+                    Remote stealth pass brute force
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.41.4" data-path="../pentesting/1521-1522-1529-pentesting-oracle-listener/oracle-rce-and-more.html">
+            
+                <a href="../pentesting/1521-1522-1529-pentesting-oracle-listener/oracle-rce-and-more.html">
+            
+                    
+                    Oracle RCE & more
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.42" data-path="../pentesting/1723-pentesting-pptp.html">
+            
+                <a href="../pentesting/1723-pentesting-pptp.html">
+            
+                    
+                    1723 - Pentesting PPTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.43" data-path="../pentesting/1883-pentesting-mqtt-mosquitto.html">
+            
+                <a href="../pentesting/1883-pentesting-mqtt-mosquitto.html">
+            
+                    
+                    1883 - Pentesting MQTT (Mosquitto)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.44" data-path="../pentesting/nfs-service-pentesting.html">
+            
+                <a href="../pentesting/nfs-service-pentesting.html">
+            
+                    
+                    2049 - Pentesting NFS Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.45" data-path="../pentesting/pentesting-compaq-hp-insight-manager.html">
+            
+                <a href="../pentesting/pentesting-compaq-hp-insight-manager.html">
+            
+                    
+                    2301,2381 - Pentesting Compaq/HP Insight Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.46" data-path="../pentesting/3260-pentesting-iscsi.html">
+            
+                <a href="../pentesting/3260-pentesting-iscsi.html">
+            
+                    
+                    3260 - Pentesting ISCSI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.47" data-path="../pentesting/3299-pentesting-saprouter.html">
+            
+                <a href="../pentesting/3299-pentesting-saprouter.html">
+            
+                    
+                    3299 - Pentesting SAPRouter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.48" data-path="../pentesting/pentesting-mysql.html">
+            
+                <a href="../pentesting/pentesting-mysql.html">
+            
+                    
+                    3306 - Pentesting Mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.49" data-path="../pentesting/pentesting-rdp.html">
+            
+                <a href="../pentesting/pentesting-rdp.html">
+            
+                    
+                    3389 - Pentesting RDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.50" data-path="../pentesting/3632-pentesting-distcc.html">
+            
+                <a href="../pentesting/3632-pentesting-distcc.html">
+            
+                    
+                    3632 - Pentesting distcc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.51" data-path="../pentesting/4369-pentesting-erlang-port-mapper-daemon-epmd.html">
+            
+                <a href="../pentesting/4369-pentesting-erlang-port-mapper-daemon-epmd.html">
+            
+                    
+                    4369 - Pentesting Erlang Port Mapper Daemon (epmd)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.52" data-path="../pentesting/5353-udp-multicast-dns-mdns.html">
+            
+                <a href="../pentesting/5353-udp-multicast-dns-mdns.html">
+            
+                    
+                    5353/UDP Multicast DNS (mDNS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.53" data-path="../pentesting/pentesting-postgresql.html">
+            
+                <a href="../pentesting/pentesting-postgresql.html">
+            
+                    
+                    5432,5433 - Pentesting Postgresql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.54" data-path="../pentesting/5671-5672-pentesting-amqp.html">
+            
+                <a href="../pentesting/5671-5672-pentesting-amqp.html">
+            
+                    
+                    5671,5672 - Pentesting AMQP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.55" data-path="../pentesting/pentesting-vnc.html">
+            
+                <a href="../pentesting/pentesting-vnc.html">
+            
+                    
+                    5800,5801,5900,5901 - Pentesting VNC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.56" data-path="../pentesting/5984-pentesting-couchdb.html">
+            
+                <a href="../pentesting/5984-pentesting-couchdb.html">
+            
+                    
+                    5984,6984 - Pentesting CouchDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.57" data-path="../pentesting/5985-5986-pentesting-winrm.html">
+            
+                <a href="../pentesting/5985-5986-pentesting-winrm.html">
+            
+                    
+                    5985,5986 - Pentesting WinRM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.58" data-path="../pentesting/6000-pentesting-x11.html">
+            
+                <a href="../pentesting/6000-pentesting-x11.html">
+            
+                    
+                    6000 - Pentesting X11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.59" data-path="../pentesting/6379-pentesting-redis.html">
+            
+                <a href="../pentesting/6379-pentesting-redis.html">
+            
+                    
+                    6379 - Pentesting Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.60" data-path="../pentesting/8009-pentesting-apache-jserv-protocol-ajp.html">
+            
+                <a href="../pentesting/8009-pentesting-apache-jserv-protocol-ajp.html">
+            
+                    
+                    8009 - Pentesting Apache JServ Protocol (AJP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.61" data-path="../pentesting/cassandra.html">
+            
+                <a href="../pentesting/cassandra.html">
+            
+                    
+                    9042/9160 - Pentesting Cassandra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.62" data-path="../pentesting/9100-pjl.html">
+            
+                <a href="../pentesting/9100-pjl.html">
+            
+                    
+                    9100 - Pentesting Raw Printing (JetDirect, AppSocket, PDL-datastream)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.63" data-path="../pentesting/9200-pentesting-elasticsearch.html">
+            
+                <a href="../pentesting/9200-pentesting-elasticsearch.html">
+            
+                    
+                    9200 - Pentesting Elasticsearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.64" data-path="../pentesting/10000-network-data-management-protocol-ndmp.html">
+            
+                <a href="../pentesting/10000-network-data-management-protocol-ndmp.html">
+            
+                    
+                    10000 - Pentesting Network Data Management Protocol (ndmp)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.65" data-path="../pentesting/11211-memcache.html">
+            
+                <a href="../pentesting/11211-memcache.html">
+            
+                    
+                    11211 - Pentesting Memcache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.66" data-path="../pentesting/15672-pentesting-rabbitmq-management.html">
+            
+                <a href="../pentesting/15672-pentesting-rabbitmq-management.html">
+            
+                    
+                    15672 - Pentesting RabbitMQ Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.67" data-path="../pentesting/27017-27018-mongodb.html">
+            
+                <a href="../pentesting/27017-27018-mongodb.html">
+            
+                    
+                    27017,27018 - Pentesting MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.68" data-path="../pentesting/44818-ethernetip.html">
+            
+                <a href="../pentesting/44818-ethernetip.html">
+            
+                    
+                    44818/UDP/TCP - Pentesting EthernetIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.69" data-path="../pentesting/47808-udp-bacnet.html">
+            
+                <a href="../pentesting/47808-udp-bacnet.html">
+            
+                    
+                    47808/udp - Pentesting BACNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.70" data-path="../pentesting/50030-50060-50070-50075-50090-pentesting-hadoop.html">
+            
+                <a href="../pentesting/50030-50060-50070-50075-50090-pentesting-hadoop.html">
+            
+                    
+                    50030,50060,50070,50075,50090 - Pentesting Hadoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Pentesting Web</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../pentesting-web/2fa-bypass.md">
+            
+                <span>
+            
+                    
+                    2FA Bypass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../pentesting-web/abusing-hop-by-hop-headers.md">
+            
+                <span>
+            
+                    
+                    Abusing hop-by-hop headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../pentesting-web/bypass-payment-process.md">
+            
+                <span>
+            
+                    
+                    Bypass Payment Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../pentesting-web/captcha-bypass.md">
+            
+                <span>
+            
+                    
+                    Captcha Bypass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../pentesting-web/cache-deception.md">
+            
+                <span>
+            
+                    
+                    Cache Poisoning and Cache Deception
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../pentesting-web/clickjacking.md">
+            
+                <span>
+            
+                    
+                    Clickjacking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../pentesting-web/client-side-template-injection-csti.md">
+            
+                <span>
+            
+                    
+                    Client Side Template Injection (CSTI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../pentesting-web/command-injection.md">
+            
+                <span>
+            
+                    
+                    Command Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="../pentesting-web/content-security-policy-csp-bypass.md">
+            
+                <span>
+            
+                    
+                    Content Security Policy (CSP) Bypass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="../pentesting-web/hacking-with-cookies.md">
+            
+                <span>
+            
+                    
+                    Cookies Hacking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="../pentesting-web/cors-bypass.md">
+            
+                <span>
+            
+                    
+                    CORS - Misconfigurations & Bypass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.12" data-path="../pentesting-web/crlf-0d-0a.md">
+            
+                <span>
+            
+                    
+                    CRLF (%0D%0A) Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.13" data-path="../pentesting-web/cross-site-websocket-hijacking-cswsh.md">
+            
+                <span>
+            
+                    
+                    Cross-site WebSocket hijacking (CSWSH)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.14" data-path="../pentesting-web/csrf-cross-site-request-forgery.md">
+            
+                <span>
+            
+                    
+                    CSRF (Cross Site Request Forgery)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.15" data-path="../pentesting-web/dangling-markup-html-scriptless-injection.md">
+            
+                <span>
+            
+                    
+                    Dangling Markup - HTML scriptless injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16" data-path="../pentesting-web/deserialization/README.md">
+            
+                <span>
+            
+                    
+                    Deserialization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.16.1" data-path="../pentesting-web/deserialization/nodejs-deserialization-__proto__-abuse.md">
+            
+                <span>
+            
+                    
+                    NodeJS deserialization __proto__ abuse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16.2" data-path="../pentesting-web/deserialization/java-jsf-viewstate-.faces-deserialization.md">
+            
+                <span>
+            
+                    
+                    Java JSF ViewState (.faces) Deserialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16.3" data-path="../pentesting-web/deserialization/java-dns-deserialization-and-gadgetprobe.md">
+            
+                <span>
+            
+                    
+                    Java DNS Deserialization, GadgetProbe and Java Deserialization Scanner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16.4" data-path="../pentesting-web/deserialization/basic-java-deserialization-objectinputstream-readobject.md">
+            
+                <span>
+            
+                    
+                    Basic Java Deserialization (ObjectInputStream, readObject)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16.5" data-path="../pentesting-web/deserialization/java-transformers-to-rutime-exec-payload.md">
+            
+                <span>
+            
+                    
+                    CommonsCollection1 Payload - Java Transformers to Rutime exec() and Thread Sleep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16.6" data-path="../pentesting-web/deserialization/basic-.net-deserialization-objectdataprovider-gadgets-expandedwrapper-and-json.net.md">
+            
+                <span>
+            
+                    
+                    Basic .Net deserialization (ObjectDataProvider gadget, ExpandedWrapper, and Json.Net)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16.7" data-path="../pentesting-web/deserialization/exploiting-__viewstate-parameter.md">
+            
+                <span>
+            
+                    
+                    Exploiting __VIEWSTATE parameter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.17" data-path="../pentesting-web/email-header-injection.md">
+            
+                <span>
+            
+                    
+                    Email Header Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.18" data-path="../pentesting-web/file-inclusion.md">
+            
+                <span>
+            
+                    
+                    File Inclusion/Path traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.19" data-path="../pentesting-web/file-upload/README.md">
+            
+                <span>
+            
+                    
+                    File Upload
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.19.1" data-path="../pentesting-web/file-upload/pdf-upload-xxe-and-cors-bypass.md">
+            
+                <span>
+            
+                    
+                    PDF Upload - XXE and CORS bypass
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.20" data-path="../pentesting-web/http-request-smuggling.md">
+            
+                <span>
+            
+                    
+                    HTTP Request Smuggling / HTTP Desync Attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.21" data-path="../pentesting-web/idor.md">
+            
+                <span>
+            
+                    
+                    IDOR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.22" data-path="../pentesting-web/hacking-jwt-json-web-tokens.md">
+            
+                <span>
+            
+                    
+                    JWT Vulnerabilities (Json Web Tokens)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.23" data-path="../pentesting-web/nosql-injection.md">
+            
+                <span>
+            
+                    
+                    NoSQL injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.24" data-path="../pentesting-web/ldap-injection.md">
+            
+                <span>
+            
+                    
+                    LDAP Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.25" data-path="../pentesting-web/oauth-to-account-takeover.md">
+            
+                <span>
+            
+                    
+                    OAuth to Account takeover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.26" data-path="../pentesting-web/open-redirect.md">
+            
+                <span>
+            
+                    
+                    Open Redirect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.27" data-path="../pentesting-web/parameter-pollution.md">
+            
+                <span>
+            
+                    
+                    Parameter Pollution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.28" data-path="../pentesting-web/race-condition.md">
+            
+                <span>
+            
+                    
+                    Race Condition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.29" data-path="../pentesting-web/rate-limit-bypass.md">
+            
+                <span>
+            
+                    
+                    Rate Limit Bypass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.30" data-path="../pentesting-web/sql-injection/README.md">
+            
+                <span>
+            
+                    
+                    SQL Injection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.30.1" data-path="../pentesting-web/sql-injection/mssql-injection.md">
+            
+                <span>
+            
+                    
+                    MSSQL Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.30.2" data-path="../pentesting-web/sql-injection/oracle-injection.md">
+            
+                <span>
+            
+                    
+                    Oracle injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.30.3" data-path="../pentesting-web/sql-injection/postgresql-injection/README.md">
+            
+                <span>
+            
+                    
+                    PostgreSQL injection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.30.3.1" data-path="../pentesting-web/sql-injection/postgresql-injection/dblink-lo_import-data-exfiltration.md">
+            
+                <span>
+            
+                    
+                    dblink/lo_import data exfiltration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.30.3.2" data-path="../pentesting-web/sql-injection/postgresql-injection/pl-pgsql-password-bruteforce.md">
+            
+                <span>
+            
+                    
+                    PL/pgSQL Password Bruteforce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.30.3.3" data-path="../pentesting-web/sql-injection/postgresql-injection/network-privesc-port-scanner-and-ntlm-chanllenge-response-disclosure.md">
+            
+                <span>
+            
+                    
+                    Network - Privesc, Port Scanner and NTLM chanllenge response disclosure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.30.3.4" data-path="../pentesting-web/sql-injection/postgresql-injection/big-binary-files-upload-postgresql.md">
+            
+                <span>
+            
+                    
+                    Big Binary Files Upload (PostgreSQL)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.30.3.5" data-path="../pentesting-web/sql-injection/postgresql-injection/rce-with-postgresql-extensions.md">
+            
+                <span>
+            
+                    
+                    RCE with PostgreSQL Extensions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.30.4" data-path="../pentesting-web/sql-injection/mysql-injection/README.md">
+            
+                <span>
+            
+                    
+                    MySQL injection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.30.4.1" data-path="../pentesting-web/sql-injection/mysql-injection/mysql-ssrf.md">
+            
+                <span>
+            
+                    
+                    Mysql SSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.30.5" data-path="../pentesting-web/sql-injection/sqlmap/README.md">
+            
+                <span>
+            
+                    
+                    SQLMap - Cheetsheat
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.30.5.1" data-path="../pentesting-web/sql-injection/sqlmap/second-order-injection-sqlmap.md">
+            
+                <span>
+            
+                    
+                    Second Order Injection - SQLMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.31" data-path="../pentesting-web/ssrf-server-side-request-forgery.md">
+            
+                <span>
+            
+                    
+                    SSRF (Server Side Request Forgery)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.32" data-path="../pentesting-web/ssti-server-side-template-injection.md">
+            
+                <span>
+            
+                    
+                    SSTI (Server Side Template Injection)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.33" data-path="../pentesting-web/domain-subdomain-takeover.md">
+            
+                <span>
+            
+                    
+                    Domain/Subdomain takeover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.34" data-path="../pentesting-web/unicode-normalization-vulnerability.md">
+            
+                <span>
+            
+                    
+                    Unicode Normalization vulnerability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.35" data-path="../pentesting-web/web-tool-wfuzz.md">
+            
+                <span>
+            
+                    
+                    Web Tool - WFuzz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.36" data-path="../pentesting-web/xpath-injection.md">
+            
+                <span>
+            
+                    
+                    XPATH injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.37" data-path="../pentesting-web/xslt-server-side-injection-extensible-stylesheet-languaje-transformations.md">
+            
+                <span>
+            
+                    
+                    XSLT Server Side Injection (Extensible Stylesheet Languaje Transformations)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.38" data-path="../pentesting-web/xxe-xee-xml-external-entity.md">
+            
+                <span>
+            
+                    
+                    XXE - XEE - XML External Entity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.39" data-path="../pentesting-web/xss-cross-site-scripting/README.md">
+            
+                <span>
+            
+                    
+                    XSS (Cross Site Scripting)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.39.1" data-path="../pentesting-web/xss-cross-site-scripting/dom-xss.md">
+            
+                <span>
+            
+                    
+                    DOM XSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.39.2" data-path="../pentesting-web/xss-cross-site-scripting/server-side-xss-dynamic-pdf.md">
+            
+                <span>
+            
+                    
+                    Server Side XSS (Dynamic PDF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.39.3" data-path="../pentesting-web/xss-cross-site-scripting/xss-tools.md">
+            
+                <span>
+            
+                    
+                    XSS Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.40" data-path="../pentesting-web/xssi-cross-site-script-inclusion.md">
+            
+                <span>
+            
+                    
+                    XSSI (Cross-Site Script Inclusion)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.41" data-path="../pentesting-web/xs-search.md">
+            
+                <span>
+            
+                    
+                    XS-Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Physical attacks</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../physical-attacks/physical-attacks.md">
+            
+                <span>
+            
+                    
+                    Physical Attacks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../physical-attacks/escaping-from-gui-applications/README.md">
+            
+                <span>
+            
+                    
+                    Escaping from KIOSKs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.2.1" data-path="../physical-attacks/escaping-from-gui-applications/show-file-extensions.md">
+            
+                <span>
+            
+                    
+                    Show file extensions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Exploiting</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../exploiting/linux-exploiting-basic-esp/README.md">
+            
+                <span>
+            
+                    
+                    Linux Exploiting (Basic) (SPA)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../exploiting/linux-exploiting-basic-esp/rop-syscall-execv.md">
+            
+                <span>
+            
+                    
+                    ROP - Syscall execv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../exploiting/linux-exploiting-basic-esp/rop-leaking-libc-address.md">
+            
+                <span>
+            
+                    
+                    ROP - Leaking LIBC address
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../exploiting/linux-exploiting-basic-esp/bypassing-canary-and-pie.md">
+            
+                <span>
+            
+                    
+                    Bypassing Canary & PIE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.4" data-path="../exploiting/linux-exploiting-basic-esp/ret2lib.md">
+            
+                <span>
+            
+                    
+                    Ret2Lib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.5" data-path="../exploiting/linux-exploiting-basic-esp/fusion.md">
+            
+                <span>
+            
+                    
+                    Fusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../exploiting/tools/README.md">
+            
+                <span>
+            
+                    
+                    Exploiting Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.2.1" data-path="../exploiting/tools/pwntools.md">
+            
+                <span>
+            
+                    
+                    PwnTools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../exploiting/windows-exploiting-basic-guide-oscp-lvl.md">
+            
+                <span>
+            
+                    
+                    Windows Exploiting (Basic Guide - OSCP lvl)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../exploiting/reversing.md">
+            
+                <span>
+            
+                    
+                    Reversing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Forensics</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../forensics/malware-analysis.md">
+            
+                <span>
+            
+                    
+                    Malware Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../forensics/memory-dump-analysis.md">
+            
+                <span>
+            
+                    
+                    Memory dump analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../forensics/pcaps-analysis/README.md">
+            
+                <span>
+            
+                    
+                    Pcaps analysis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.3.1" data-path="../forensics/pcaps-analysis/usb-keyboard-pcap-analysis.md">
+            
+                <span>
+            
+                    
+                    USB Keyboard pcap analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3.2" data-path="../forensics/pcaps-analysis/dnscat-exfiltration.md">
+            
+                <span>
+            
+                    
+                    DNSCat pcap analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3.3" data-path="../forensics/pcaps-analysis/wireshark-tricks.md">
+            
+                <span>
+            
+                    
+                    WireShark tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../forensics/volatility-examples.md">
+            
+                <span>
+            
+                    
+                    Volatility - Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../forensics/basic-forensics-esp/README.md">
+            
+                <span>
+            
+                    
+                    Basic Forensics (ESP)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.5.1" data-path="../forensics/basic-forensics-esp/usb-logs-analysis.md">
+            
+                <span>
+            
+                    
+                    USB logs analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.2" data-path="../forensics/basic-forensics-esp/desofuscation-vbs-cscript.exe.md">
+            
+                <span>
+            
+                    
+                    Desofuscation vbs (cscript.exe)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.3" data-path="../forensics/basic-forensics-esp/.pyc.md">
+            
+                <span>
+            
+                    
+                    .pyc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.4" data-path="../forensics/basic-forensics-esp/office-file-analysis.md">
+            
+                <span>
+            
+                    
+                    Office file analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.5" data-path="../forensics/basic-forensics-esp/video-and-audio-file-analysis.md">
+            
+                <span>
+            
+                    
+                    Video and Audio file analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.6" data-path="../forensics/basic-forensics-esp/pdf-file-analysis.md">
+            
+                <span>
+            
+                    
+                    PDF File analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.7" data-path="../forensics/basic-forensics-esp/file-system-analysis.md">
+            
+                <span>
+            
+                    
+                    File System Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.8" data-path="../forensics/basic-forensics-esp/png-tricks.md">
+            
+                <span>
+            
+                    
+                    PNG tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5.9" data-path="../forensics/basic-forensics-esp/zips-tricks.md">
+            
+                <span>
+            
+                    
+                    ZIPs tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Crypto</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../crypto/certificates.md">
+            
+                <span>
+            
+                    
+                    Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../crypto/electronic-code-book-ecb.md">
+            
+                <span>
+            
+                    
+                    Electronic Code Book (ECB)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../crypto/cipher-block-chaining-cbc-mac-priv.md">
+            
+                <span>
+            
+                    
+                    Cipher Block Chaining CBC-MAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../crypto/padding-oracle-priv.md">
+            
+                <span>
+            
+                    
+                    Padding Oracle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../crypto/rc4-encrypt-and-decrypt.md">
+            
+                <span>
+            
+                    
+                    RC4 - Encrypt&Decrypt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="../crypto/crypto-ctfs-tricks.md">
+            
+                <span>
+            
+                    
+                    Crypto CTFs Tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">BACKDOORS</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../backdoors/merlin.md">
+            
+                <span>
+            
+                    
+                    Merlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../backdoors/empire.md">
+            
+                <span>
+            
+                    
+                    Empire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../backdoors/salseo.md">
+            
+                <span>
+            
+                    
+                    Salseo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="../backdoors/icmpsh.md">
+            
+                <span>
+            
+                    
+                    ICMPsh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Stego</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../stego/stego-tricks.md">
+            
+                <span>
+            
+                    
+                    Stego Tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../stego/esoteric-languages.md">
+            
+                <span>
+            
+                    
+                    Esoteric languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">MISC</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../misc/basic-python/README.md">
+            
+                <span>
+            
+                    
+                    Basic Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1.1" data-path="../misc/basic-python/venv.md">
+            
+                <span>
+            
+                    
+                    venv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.1.2" data-path="../misc/basic-python/bypass-python-sandboxes.md">
+            
+                <span>
+            
+                    
+                    Bypass Python sandboxes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.1.3" data-path="../misc/basic-python/magic-methods.md">
+            
+                <span>
+            
+                    
+                    Magic Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.1.4" data-path="../misc/basic-python/web-requests.md">
+            
+                <span>
+            
+                    
+                    Web Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.1.5" data-path="../misc/basic-python/bruteforce-hash-few-chars.md">
+            
+                <span>
+            
+                    
+                    Bruteforce hash (few chars)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.1.6" data-path="../misc/basic-python/rop-pwn-template.md">
+            
+                <span>
+            
+                    
+                    ROP-PWN template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="14.2" data-path="../misc/references.md">
+            
+                <span>
+            
+                    
+                    Other Big References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">TODO</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../todo/more-tools.md">
+            
+                <span>
+            
+                    
+                    More Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="../todo/misc.md">
+            
+                <span>
+            
+                    
+                    MISC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.3" data-path="../todo/pentesting-dns.md">
+            
+                <span>
+            
+                    
+                    Pentesting DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../burp-suite.md">
+            
+                <span>
+            
+                    
+                    Burp Suite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.2" data-path="../other-web-tricks.md">
+            
+                <span>
+            
+                    
+                    Other Web Tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.3" data-path="../interesting-http.md">
+            
+                <span>
+            
+                    
+                    Interesting HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.4" data-path="../emails-vulns.md">
+            
+                <span>
+            
+                    
+                    Emails Vulnerabilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.5" data-path="../cloud-security-review.md">
+            
+                <span>
+            
+                    
+                    Cloud security review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.6" data-path="../android-forensics.md">
+            
+                <span>
+            
+                    
+                    Android Forensics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.7" data-path="../tr-069.md">
+            
+                <span>
+            
+                    
+                    TR-069
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.8" data-path="../6881-udp-pentesting-bittorrent.md">
+            
+                <span>
+            
+                    
+                    6881/udp - Pentesting BitTorrent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.9" data-path="../ctf-write-ups/README.md">
+            
+                <span>
+            
+                    
+                    CTF Write-ups
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="16.9.1" data-path="../ctf-write-ups/try-hack-me/README.md">
+            
+                <span>
+            
+                    
+                    Try Hack Me
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="16.9.1.1" data-path="../ctf-write-ups/try-hack-me/hc0n-christmas-ctf-2019.md">
+            
+                <span>
+            
+                    
+                    hc0n Christmas CTF - 2019
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.9.1.2" data-path="../ctf-write-ups/try-hack-me/pickle-rick.md">
+            
+                <span>
+            
+                    
+                    Pickle Rick
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="16.10" data-path="../1911-pentesting-fox.md">
+            
+                <span>
+            
+                    
+                    1911 - Pentesting fox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.11" data-path="../online-platforms-with-api.md">
+            
+                <span>
+            
+                    
+                    Online Platforms with API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.12" data-path="../phising-documents.md">
+            
+                <span>
+            
+                    
+                    Phising Documents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.13" data-path="../reset-password.md">
+            
+                <span>
+            
+                    
+                    Reset/Forgoten Password Bypass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.14" data-path="../stealing-sensitive-information-disclosure-from-a-web.md">
+            
+                <span>
+            
+                    
+                    Stealing Sensitive Information Disclosure from a Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >External Recon Methodology</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="external-recon-methodology">External Recon Methodology</h1>
+<h2 id="assets-discoveries">Assets discoveries</h2>
+<blockquote>
+<p>So you were said that everything belonging to some company is inside the scope, and you want to figure out what this company actually owns.</p>
+</blockquote>
+<p>The goal of this phase is to obtain all the <strong>companies owned by the main company</strong> and then all the <strong>assets</strong> of these companies. To do so, we are going to:</p>
+<ol>
+<li>Find the acquisitions of the main company, this will give us the companies inside the scope.</li>
+<li>Find the ASN (if any) of each company, this will give us the IP ranges owned by each company</li>
+<li>Use reverse whois lookups to search for other entries (organisation names, domains...) related to the first one (this can be done recursively)</li>
+<li>Use other techniques like shodan <code>org</code>and <code>ssl</code>filters to search for other assets (the <code>ssl</code> trick can be done recursively).</li>
+</ol>
+<h3 id="acquisitions">Acquisitions</h3>
+<p>First of all, we need to know which <strong>other companies are owned by the main company</strong>.<br>One option is to visit <a href="https://www.crunchbase.com/" target="_blank">https://www.crunchbase.com/</a>, <strong>search</strong> for the <strong>main company</strong>, and <strong>click</strong> on &quot;<strong>acquisitions</strong>&quot;. There you will see other companies acquired by the main one.<br>Other option is to visit the <strong>Wikipedia</strong> page of the main company and search for <strong>acquisitions</strong>.</p>
+<blockquote>
+<p>Ok, at this point you should know all the companies inside the scope. Lets figure out how to find their assets.</p>
+</blockquote>
+<h3 id="asns">ASNs</h3>
+<p>An autonomous system number (<strong>ASN</strong>) is a <strong>unique number</strong> assigned to an <strong>autonomous system</strong> (AS) by the <strong>Internet Assigned Numbers Authority (IANA)</strong>.<br>An <strong>AS</strong> consists of <strong>blocks</strong> of <strong>IP addresses</strong> which have a distinctly defined policy for accessing external networks and are administered by a single organisation but may be made up of several operators.</p>
+<p>It&apos;s interesting to find if the <strong>company have assigned any ASN</strong> to find its <strong>IP ranges.</strong> It will be interested to perform a <strong>vulnerability test</strong> against all the <strong>hosts</strong> inside the <strong>scope</strong> and <strong>look for domains</strong> inside these IPs.<br><strong>**You can search by </strong>company name<strong>, by </strong>IP<strong> or by </strong>domain<strong> in <a href="https://bgp.he.net/" target="_blank">https://bgp.he.net/</a>.<br>Depending on the region of the company this links could be useful to gather more data: <a href="https://www.afrinic.net/" target="_blank">AFRINIC</a> (Africa), <a href="https://www.arin.net/about/welcome/region/" target="_blank">Arin</a>(North America), <a href="https://www.apnic.net/" target="_blank">APNIC</a> (Asia), <a href="https://www.lacnic.net/" target="_blank">LACNIC</a> (Latin America), <a href="https://www.ripe.net/" target="_blank">RIPE NCC</a> (Europe). Anyway, probably all the </strong>useful information<strong> (IP ranges and Whois) </strong>appears already in the first link**.</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#You can try &quot;automate&quot; this with amass, but it&apos;s not very recommended</span>
+amass intel -org tesla
+amass intel -asn 8911,50313,394161
+</code></pre>
+<p>You can find the IP ranges of an organisation also using <a href="http://asnlookup.com/" target="_blank">http://asnlookup.com/</a> (it has free API).<br>You can fins the IP and ASN of a domain using <a href="http://ipv4info.com/" target="_blank">http://ipv4info.com/</a>.</p>
+<h3 id="looking-for-vulnerabilities">Looking for vulnerabilities</h3>
+<p>At this point we known <strong>all the assets inside the scope</strong>, so if you are allowed you could launch some <strong>vulnerability scanner</strong> (Nessus, OpenVAS) over all the hosts.<br>Also, you could launch some <a href="pentesting/pentesting-network#discovering-hosts-from-the-outside"><strong>port scans</strong></a> <strong>**or use services like </strong>shodan<strong> to find </strong>open ports<strong> and depending on what you find you should </strong>take a look in this book to how to pentest several possible service running<strong>.<br>Also, It could be worth it to mention that you can also prepare some </strong>default username<strong> and </strong>passwords<strong> lists and try to </strong>bruteforce** services with <a href="https://github.com/x90skysn3k/brutespray" target="_blank">https://github.com/x90skysn3k/brutespray</a>.</p>
+<h2 id="domains">Domains</h2>
+<blockquote>
+<p>We know all the companies inside the scope and their assets, it&apos;s time to find the domains inside the scope.</p>
+</blockquote>
+<p><em>Please, note that in the following purposed techniques you can also find subdomains and that information shouldn&apos;t be underrated.</em> </p>
+<p>First of all you should look for the <strong>main domain</strong>(s) of each company. For example, for <em>Tesla Inc.</em> is going to be <em>tesla.com</em>.</p>
+<h3 id="reverse-dns">Reverse DNS</h3>
+<p>As you have found all the IP ranges of the domains you could try to perform <strong>reverse dns lookups</strong> on those <strong>IPs to find more domains inside the scope</strong>. Try to use some dns server of the victim or some well-known dns server (1.1.1.1, 8.8.8.8)</p>
+<pre><code class="lang-bash">dnsrecon -r &lt;DNS Range&gt; -n &lt;IP_DNS&gt;   <span class="hljs-comment">#DNS reverse of all of the addresses</span>
+dnsrecon <span class="hljs-_">-d</span> facebook.com -r 157.240.221.35/24 <span class="hljs-comment">#Using facebooks dns</span>
+dnsrecon -r 157.240.221.35/24 -n 1.1.1.1 <span class="hljs-comment">#Using cloudflares dns</span>
+dnsrecon -r 157.240.221.35/24 -n 8.8.8.8 <span class="hljs-comment">#Using google dns</span>
+</code></pre>
+<p>For this to work, the administrator has to enable manually the PTR.<br>You can also use a online tool for this info: <a href="http://ptrarchive.com/" target="_blank">http://ptrarchive.com/</a></p>
+<h3 id="reverse-whois-loop">Reverse Whois (loop)</h3>
+<p>Inside a <strong>whois</strong> you can find a lot of interesting <strong>information</strong> like <strong>organisation name</strong>, <strong>address</strong>, <strong>emails</strong>, phone numbers... But which is even more interesting is that you can find <strong>more assets related to the company</strong> if you perform <strong>reverse whois lookups by any of those fields</strong> (for example other whois registries where the same email appears).<br>You can use online tools like: </p>
+<ul>
+<li><a href="https://viewdns.info/reversewhois/" target="_blank">https://viewdns.info/reversewhois/</a> - <strong>Free</strong></li>
+<li><a href="https://domaineye.com/reverse-whois" target="_blank">https://domaineye.com/reverse-whois</a>  - <strong>Free</strong></li>
+<li><a href="https://www.reversewhois.io/" target="_blank">https://www.reversewhois.io/</a>  - <strong>Free</strong></li>
+<li>****<a href="https://www.whoxy.com/" target="_blank">https://www.whoxy.com/</a> - <strong>Free</strong> web, not free API.</li>
+<li>****<a href="http://reversewhois.domaintools.com/" target="_blank">http://reversewhois.domaintools.com/</a> - Not free</li>
+<li><a href="https://drs.whoisxmlapi.com/reverse-whois-search" target="_blank">https://drs.whoisxmlapi.com/reverse-whois-search</a> - Not Free (only <strong>100 free</strong> searches)</li>
+<li><a href="https://www.domainiq.com/" target="_blank">https://www.domainiq.com/</a> - Not Free</li>
+</ul>
+<p>You can automate this task using <a href="https://github.com/vysecurity/DomLink" target="_blank"><strong>DomLink</strong> </a>(requires a whoxy API key).<br>You can also perform some automatic reverse whois discovery with <a href="https://github.com/OWASP/Amass" target="_blank">amass</a>: <code>amass intel -d tesla.com -whois</code></p>
+<p><strong>Note that you can use this technique to discover more domain names every time you find a new domain.</strong></p>
+<h3 id="trackers">Trackers</h3>
+<p>If find the <strong>same ID of the same tracker</strong> in 2 different pages you can suppose that <strong>both pages</strong> are <strong>managed by the same team</strong>.<br>For example, if you see the same <strong>Google Analytics ID</strong> or the same <strong>Adsense ID</strong> on several pages.</p>
+<p>There are some pages that let you search by these trackers and more:</p>
+<ul>
+<li><a href="https://builtwith.com/" target="_blank"><strong>BuiltWith</strong></a>****</li>
+<li>****<a href="https://www.sitesleuth.io/" target="_blank"><strong>Sitesleuth</strong></a>****</li>
+<li>****<a href="https://publicwww.com/" target="_blank"><strong>Publicwww</strong></a>****</li>
+<li>****<a href="http://spyonweb.com/" target="_blank"><strong>SpyOnWeb</strong></a>****</li>
+</ul>
+<h3 id="favicon"><strong>Favicon</strong></h3>
+<p>Did you know that we can find related domains and sub domains to our target by looking for the same favicon icon hash? This is exactly what <a href="https://github.com/m4ll0k/Bug-Bounty-Toolz/blob/master/favihash.py" target="_blank">favihash.py</a> tool made by <a href="https://twitter.com/m4ll0k2" target="_blank">@m4ll0k2</a> does. Here&#x2019;s how to use it:</p>
+<pre><code class="lang-bash">cat my_targets.txt | xargs -I %% bash -c <span class="hljs-string">&apos;echo &quot;http://%%/favicon.ico&quot;&apos;</span> &gt; targets.txt
+python3 favihash.py <span class="hljs-_">-f</span> https://target/favicon.ico -t targets.txt <span class="hljs-_">-s</span>
+</code></pre>
+<p><img src="https://www.infosecmatter.com/wp-content/uploads/2020/07/favihash.jpg" alt="favihash - discover domains with the same favicon icon hash"></p>
+<p>Simply said, favihash will allow us to discover domains that have the same favicon icon hash as our target.</p>
+<h3 id="other-ways">Other ways</h3>
+<p><strong>Note that you can use this technique to discover more domain names every time you find a new domain.</strong></p>
+<h4 id="shodan">Shodan</h4>
+<p>As you already know the name of the organisation owning the IP space. You can search by that data in shodan using: <code>org:&quot;Tesla, Inc.&quot;</code> Check the found hosts for new unexpected domains in the TLS certificate.</p>
+<p>You could access the <strong>TLS certificate</strong> of the main web page, obtain the <strong>Organisation name</strong> and then search for that name inside the <strong>TLS certificates</strong> of all the web pages known by <strong>shodan</strong> with the filter : <code>ssl:&quot;Tesla Motors&quot;</code></p>
+<h4 id="google">Google</h4>
+<p>Go to the main page an find something that identifies the company, like the copyright (&quot;Tesla &#xA9; 2020&quot;). Search for that in google or other browsers to find possible new domains/pages.</p>
+<h4 id="assetfinder">Assetfinder</h4>
+<p><a href="https://github.com/tomnomnom/assetfinder" target="_blank"><strong>Assetfinder</strong> </a>is a tool that look for <strong>domains related</strong> with a main domain and <strong>subdomains</strong> of them, pretty amazing.</p>
+<h3 id="looking-for-vulnerabilities">Looking for vulnerabilities</h3>
+<p>Check for some <a href="pentesting-web/domain-subdomain-takeover.md#domain-takeover">domain takeover</a>. Maybe some company is <strong>using some a domain</strong> but they <strong>lost the ownership</strong>. Just register it (if cheap enough) and let know the company.</p>
+<p>If you find any <strong>domain with an IP different</strong> from the ones you already found in the assets discovery, you should perform a <strong>basic vulnerability scan</strong> (using Nessus or OpenVAS) and some <a href="pentesting/pentesting-network#discovering-hosts-from-the-outside"><strong>port scan</strong></a> with <strong>nmap/masscan/shodan</strong>. Depending on which services are running you can find in <strong>this book some tricks to &quot;attack&quot; them</strong>.<br><em>Note that sometimes the domain is hosted inside an IP that is not controlled by the client, so it&apos;s not in the scope, be careful.</em></p>
+<h2 id="subdomains">Subdomains</h2>
+<blockquote>
+<p>We know all the companies inside the scope, all the assets of each company and all the domains related to the companies.</p>
+</blockquote>
+<p>It&apos;s time to find all the possible subdomains of each found domain.</p>
+<h3 id="dns">DNS</h3>
+<p>Let&apos;s try to get <strong>subdomains</strong> from the <strong>DNS</strong> records. We should also try for <strong>Zone Transfer</strong> (If vulnerable, you should report it).</p>
+<pre><code class="lang-bash">dnsrecon <span class="hljs-_">-a</span> <span class="hljs-_">-d</span> tesla.com
+</code></pre>
+<h3 id="osint">OSINT</h3>
+<p>The fastest way to obtain a lot of subdomains is search in external sources. I&apos;m not going to discuss which sources are the bests and how to use them, but you can find here several utilities: <a href="https://pentester.land/cheatsheets/2018/11/14/subdomains-enumeration-cheatsheet.html" target="_blank">https://pentester.land/cheatsheets/2018/11/14/subdomains-enumeration-cheatsheet.html</a></p>
+<p>A really good place to search for subdomains is <a href="https://crt.sh/" target="_blank">https://crt.sh/</a>.</p>
+<p>The most used tools are <a href="https://github.com/OWASP/Amass" target="_blank"><strong>Amass</strong></a><strong>,</strong> <a href="https://github.com/projectdiscovery/subfinder" target="_blank"><strong>subfinder</strong></a><strong>,</strong> <a href="https://github.com/Edu4rdSHL/findomain/" target="_blank"><strong>findomain</strong></a><strong>,</strong> <a href="https://github.com/shmilylty/OneForAll/blob/master/README.en.md" target="_blank"><strong>OneForAll</strong></a><strong>,</strong> <a href="https://github.com/tomnomnom/assetfinder" target="_blank"><strong>assetfinder</strong></a><strong>,</strong> <a href="https://github.com/Screetsec/Sudomy" target="_blank"><strong>Sudomy</strong></a><strong>.</strong> I would recommend to start using them configuring the API keys, and then start testing other tools or possibilities.</p>
+<pre><code class="lang-bash">amass enum [-active] [-ip] <span class="hljs-_">-d</span> tesla.com
+./subfinder-linux-amd64 <span class="hljs-_">-d</span> tesla.com [-silent]
+./findomain-linux -t tesla.com [--quiet]
+python3 oneforall.py --target tesla.com [--dns False] [--req False] run
+assetfinder --subs-only &lt;domain&gt;
+</code></pre>
+<p>Another possibly interesting tool is <a href="https://github.com/lc/gau" target="_blank"><strong>gau</strong></a><strong>.</strong> It fetches known URLs from AlienVault&apos;s Open Threat Exchange, the Wayback Machine, and Common Crawl for any given domain.</p>
+<h4 id="chaosprojectdiscoveryio"><a href="https://chaos.projectdiscovery.io/#/" target="_blank">chaos.projectdiscovery.io</a></h4>
+<p>This project offers for <strong>free all the subdomains related to bug-bounty programs</strong>. You can access this data also using <a href="https://github.com/dr-0x0x/chaospy" target="_blank">chaospy</a> or even access the scope used by this project <a href="https://github.com/projectdiscovery/chaos-public-program-list" target="_blank">https://github.com/projectdiscovery/chaos-public-program-list</a></p>
+<p>You could also find subdomains scrapping the web pages and parsing them (including JS files) searching for subdomains using <a href="https://github.com/nsonaniya2010/SubDomainizer" target="_blank">SubDomainizer</a> or <a href="https://github.com/Cillian-Collins/subscraper" target="_blank">subscraper</a>.</p>
+<h4 id="rapiddns">RapidDNS</h4>
+<p>Quickly find subdomains using <a href="https://rapiddns.io/" target="_blank">RapidDNS</a> API (from  <a href="https://twitter.com/Verry__D/status/1282293265597779968" target="_blank">link</a>):</p>
+<pre><code class="lang-text">rapiddns(){
+curl -s &quot;https://rapiddns.io/subdomain/$1?full=1&quot; \
+ | grep -oP &apos;_blank&quot;&gt;\K[^&lt;]*&apos; \
+ | grep -v http \
+ | sort -u
+}
+</code></pre>
+<h4 id="shodan">Shodan</h4>
+<p> You found <strong>dev-int.bigcompanycdn.com</strong>, make a Shodan query like the following:</p>
+<ul>
+<li>http.html:&#x201D;dev-int.bigcompanycdn.com&#x201D;</li>
+<li>http.html:&#x201D;<a href="https://dev-int-bigcompanycdn.com&#x201D;" target="_blank">https://dev-int-bigcompanycdn.com&#x201D;</a></li>
+</ul>
+<h3 id="dns-brute-force">DNS Brute force</h3>
+<p>Let&apos;s try to find new <strong>subdomains</strong> brute-forcing DNS servers using possible subdomain names.<br>The most recommended tools for this are <a href="https://github.com/blechschmidt/massdns" target="_blank"><strong>massdns</strong></a><strong>,</strong> <a href="https://github.com/OJ/gobuster" target="_blank"><strong>gobuster</strong></a><strong>,</strong> <a href="https://github.com/blark/aiodnsbrute" target="_blank"><strong>aiodnsbrute</strong></a> <strong><strong>and </strong></strong><a href="https://github.com/projectdiscovery/shuffledns" target="_blank"><strong>shuffledns</strong></a>. The first one is faster but more prone to errors (you should always check for <strong>false positives</strong>) and the second one <strong>is more reliable</strong> (always use gobuster).</p>
+<p>For this action you will need some common subdomains lists like:</p>
+<ul>
+<li><a href="https://gist.github.com/jhaddix/86a06c5dc309d08580a018c66354a056" target="_blank">https://gist.github.com/jhaddix/86a06c5dc309d08580a018c66354a056</a></li>
+<li><a href="https://github.com/pentester-io/commonspeak" target="_blank">https://github.com/pentester-io/commonspeak</a></li>
+</ul>
+<p>For <strong>massdns</strong> you will need to pass as argument the file will all the <strong>possible well formed subdomains</strong> you want to bruteforce:</p>
+<pre><code class="lang-bash">sed <span class="hljs-string">&apos;s/$/.domain.com/&apos;</span> subdomains.txt &gt; bf-subdomains.txt
+./massdns -r resolvers.txt -w /tmp/results.txt bf-subdomains.txt
+grep -E <span class="hljs-string">&quot;tesla.com. [0-9]+ IN A .+&quot;</span> /tmp/results.txt
+</code></pre>
+<p>Gobuster bruteforcing dns&quot; %}</p>
+<pre><code class="lang-bash">gobuster dns <span class="hljs-_">-d</span> mysite.com -t 50 -w subdomains.txt
+</code></pre>
+<h3 id="vhosts">VHosts</h3>
+<h4 id="ip-vhosts">IP VHosts</h4>
+<p>You can find some VHosts in IPs using <a href="https://github.com/SpiderLabs/HostHunter" target="_blank">HostHunter</a></p>
+<h4 id="brute-force">Brute Force</h4>
+<p>If you suspect that some subdomain can be hidden in a web server you could try to brute force it:</p>
+<pre><code class="lang-bash">gobuster vhost -u https://mysite.com -t 50 -w subdomains.txt
+
+wfuzz -c -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-20000.txt --hc 400,404,403 -H <span class="hljs-string">&quot;Host: FUZZ.example.com&quot;</span> -u http://example.com -t 100
+
+<span class="hljs-comment">#From https://github.com/allyshka/vhostbrute</span>
+vhostbrute.py --url=<span class="hljs-string">&quot;example.com&quot;</span> --remoteip=<span class="hljs-string">&quot;10.1.1.15&quot;</span> --base=<span class="hljs-string">&quot;www.example.com&quot;</span> --vhosts=<span class="hljs-string">&quot;vhosts_full.list&quot;</span>
+</code></pre>
+<h3 id="dns-brute-force-v2">DNS Brute Force v2</h3>
+<p>Once you have finished looking for subdomains you can use <a href="https://github.com/ProjectAnte/dnsgen" target="_blank"><strong>dnsgen</strong> </a>and <a href="https://github.com/infosec-au/altdns" target="_blank"><strong>altdns</strong></a> to generate possible permutations of the discovered subdomains and use again <strong>massdns</strong> and <strong>gobuster</strong> to search new domains.</p>
+<h3 id="buckets-brute-force">Buckets Brute Force</h3>
+<p>While looking for <strong>subdomains</strong> keep an eye to see if it is <strong>pointing</strong> to any type of <strong>bucket</strong>, and in that case <a href="pentesting/pentesting-web/buckets"><strong>check the permissions</strong></a><strong>.</strong><br>Also, as at this point you will know all the domains inside the scope, try to <a href="pentesting/pentesting-web/buckets"><strong>brute force possible bucket names and check the permissions</strong></a>.</p>
+<h3 id="looking-for-vulnerabilities">Looking for vulnerabilities</h3>
+<p>Check for possible <a href="pentesting-web/domain-subdomain-takeover.md#subdomain-takeover"><strong>subdomain takeovers</strong></a>.<br>If the <strong>subdomain</strong> is pointing to some <strong>S3 bucket</strong>, <a href="pentesting/pentesting-web/buckets"><strong>check the permissions</strong></a>.</p>
+<p>If you find any <strong>subdomain with an IP different</strong> from the ones you already found in the assets discovery, you should perform a <strong>basic vulnerability scan</strong> (using Nessus or OpenVAS) and some <a href="pentesting/pentesting-network#discovering-hosts-from-the-outside"><strong>port scan</strong></a> with <strong>nmap/masscan/shodan</strong>. Depending on which services are running you can find in <strong>this book some tricks to &quot;attack&quot; them</strong>.<br><em>Note that sometimes the subdomain is hosted inside an IP that is not controlled by the client, so it&apos;s not in the scope, be careful.</em></p>
+<h2 id="web-servers-hunting">Web servers hunting</h2>
+<blockquote>
+<p>We have found all the companies and their assets and we know IP ranges, domains and subdomains inside the scope. It&apos;s time to search for web servers.</p>
+</blockquote>
+<p>In the previous steps probably you have already perform some <strong>recon to the IPs and domains discovered</strong>, so you may <strong>already found all the possible web servers</strong>. However, if you haven&apos;t we are now going to see some <strong>fast tricks to search for web servers</strong> inside the scope.</p>
+<p>Please, note that this will be <strong>oriented to search for web apps</strong>, you should <strong>perform the vulnerability</strong> and <strong>port scanning</strong> also (<strong>if allowed</strong> by the scope).</p>
+<p>A <strong>fast method</strong> to discover <strong>ports open</strong> related to <strong>web</strong> servers using <a href="pentesting/pentesting-network#http-port-discovery"><strong>masscan</strong> can be found here</a>.<br>Another friendly tool to look for web servers is <a href="https://github.com/tomnomnom/httprobe" target="_blank"><strong>httprobe</strong></a> <strong>and</strong> <a href="https://github.com/theblackturtle/fprobe" target="_blank"><strong>fprobe</strong></a>. You just pass a list of domains and it will try to connect to port 80 (http) and 443 (https). You can additional indicate to try other ports:</p>
+<pre><code class="lang-bash">cat /tmp/domains.txt | httprobe <span class="hljs-comment">#Test all domains inside the file for port 80 and 443</span>
+cat /tmp/domains.txt | httprobe -p http:8080 -p https:8443 <span class="hljs-comment">#Check port 80, 443 and 8080 and 8443</span>
+</code></pre>
+<h3 id="screenshots">Screenshots</h3>
+<p>Now that you have discovered <strong>all the web servers</strong> running in the scope (in <strong>IPs</strong> of the company and all the <strong>domains</strong> and <strong>subdomains</strong>) you probably <strong>don&apos;t know where to start</strong>. So, let&apos;s make it simple and start just taking screenshots of all of them. Just <strong>taking a look</strong> to the <strong>main page</strong> of all of them you could find <strong>weird</strong> endpoints more <strong>prone</strong> to be <strong>vulnerable</strong>.</p>
+<p>To perform the proposed idea you can use <a href="https://github.com/FortyNorthSecurity/EyeWitness" target="_blank"><strong>EyeWitness</strong></a>, <a href="https://github.com/breenmachine/httpscreenshot" target="_blank"><strong>HttpScreenshot</strong></a>, <strong>**[</strong>Aquatone<strong>](<a href="https://github.com/michenriksen/aquatone" target="_blank">https://github.com/michenriksen/aquatone</a>)</strong>,<strong> [</strong>shutter<strong>](<a href="https://shutter-project.org/downloads/" target="_blank">https://shutter-project.org/downloads/</a>) **</strong>or <a href="https://github.com/maaaaz/webscreenshot" target="_blank"><strong>webscreenshot</strong></a><strong>.</strong></p>
+<h2 id="recapitulation-1">Recapitulation 1</h2>
+<blockquote>
+<p>Congratulations! At this point you have already perform all the basic enumeration. Yes, it&apos;s basic because a lot more enumeration can be done (will see more tricks later).<br>Do you know that the BBs experts recommends to spend only 10-15mins in this phase? But don&apos;t worry, one you have practice you will do this even faster than that.</p>
+</blockquote>
+<p>So you have already:</p>
+<ol>
+<li>Found all the <strong>companies</strong> inside the scope</li>
+<li>Found all the <strong>assets</strong> belonging to the companies (and perform some vuln scan if in scope)</li>
+<li>Found all the <strong>domains</strong> belonging to the companies</li>
+<li>Found all the <strong>subdomains</strong> of the domains (any subdomain takeover?)</li>
+<li>Found all the <strong>web servers</strong> and took a <strong>screenshot</strong> of them (anything weird worth a deeper look?)</li>
+</ol>
+<p>Then, it&apos;s time for the real Bug Bounty hunt! In this methodology I&apos;m <strong>not going to talk about how to scan hosts</strong> (you can see a <a href="pentesting/pentesting-network">guide for that here</a>), how to use tools like Nessus or OpenVas to perform a <strong>vuln scan</strong> or how to <strong>look for vulnerabilities</strong> in the services open (this book already contains tons of information about possible vulnerabilities on a lot of common services). <strong>But, don&apos;t forget that if the scope allows it, you should give it a try.</strong></p>
+<h2 id="bug-hunting-osint-related-information"><strong>Bug hunting OSINT related information</strong></h2>
+<p>Now that we have built the list of assets of our scope it&apos;s time to search for some OSINT low-hanging fruits.</p>
+<h3 id="api-keys-leaks-in-github">Api keys leaks in github</h3>
+<ul>
+<li><a href="https://github.com/hisxo/gitGraber" target="_blank">https://github.com/hisxo/gitGraber</a></li>
+<li><a href="https://github.com/eth0izzle/shhgit" target="_blank">https://github.com/eth0izzle/shhgit</a></li>
+<li><a href="https://github.com/techgaun/github-dorks" target="_blank">https://github.com/techgaun/github-dorks</a></li>
+<li><a href="https://github.com/michenriksen/gitrob" target="_blank">https://github.com/michenriksen/gitrob</a></li>
+<li><a href="https://github.com/eth0izzle/shhgit" target="_blank">https://github.com/eth0izzle/shhgit</a></li>
+<li><a href="https://github.com/anshumanbh/git-all-secrets" target="_blank">https://github.com/anshumanbh/git-all-secrets</a></li>
+<li><a href="https://github.com/awslabs/git-secrets" target="_blank">https://github.com/awslabs/git-secrets</a></li>
+<li><a href="https://github.com/kootenpv/gittyleaks" target="_blank">https://github.com/kootenpv/gittyleaks</a></li>
+<li><a href="https://github.com/dxa4481/truffleHog" target="_blank">https://github.com/dxa4481/truffleHog</a></li>
+</ul>
+<p><strong>Dorks</strong>:  <em>AWS_SECRET_ACCESS_KEY, API KEY, API SECRET, API TOKEN&#x2026; ROOT PASSWORD, ADMIN PASSWORD, COMPANYNAME SECRET, COMPANYNAME ROOT, GCP SECRET, AWS SECRET, &#x201C;username password&#x201D; extension:sql, &#x201C;private&#x201D; extension:pgp...</em></p>
+<h4 id="more-github-dorks">More Github Dorks</h4>
+<ul>
+<li>extension:pem private</li>
+<li>extension:ppk private</li>
+<li>extension:sql mysql dump password</li>
+<li>extension:json api.forecast.io</li>
+<li>extension:json mongolab.com</li>
+<li>extension:yaml mongolab.com</li>
+<li>extension:ica [WFClient] Password=</li>
+<li>extension:avastlic &#x201C;support.avast.com&#x201D;</li>
+<li>extension:js jsforce conn.login</li>
+<li>extension:json googleusercontent client_secret</li>
+</ul>
+<h2 id="pentesting-web-methodology"><a href="pentesting/pentesting-web"><strong>Pentesting Web Methodology</strong></a>****</h2>
+<p>Anyway, the <strong>majority of the vulnerabilities</strong> found by bug hunters resides inside <strong>web applications</strong>, so at this point I would like to talk about a <strong>web application testing methodology</strong>, and you can <a href="pentesting/pentesting-web"><strong>find this information here</strong></a>.</p>
+<h2 id="recapitulation-2">Recapitulation 2</h2>
+<blockquote>
+<p>Congratulations! The testing has finished! I hope you have find some vulnerabilities.</p>
+</blockquote>
+<p>At this point you should have already read the Pentesting Web Methodology and applied it to the scope.<br>As you can see there is a lot of different vulnerabilities to search for.</p>
+<p><strong>If you have find any vulnerability thanks to this book, please reference the book in your write-up.</strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="pentesting-methodology.html" class="navigation navigation-prev " aria-label="Previous page: Pentesting Methodology">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="about-the-author.html" class="navigation navigation-next " aria-label="Next page: About the author">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"External Recon Methodology","level":"1.3","depth":1,"next":{"title":"About the author","level":"1.4","depth":1,"path":"general/about-the-author.md","ref":"general/about-the-author.md","articles":[]},"previous":{"title":"Pentesting Methodology","level":"1.2","depth":1,"path":"general/pentesting-methodology.md","ref":"general/pentesting-methodology.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"general/external-recon-methodology.md","mtime":"2020-10-31T12:03:21.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T13:14:14.458Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

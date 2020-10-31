@@ -1,13 +1,13 @@
 # Table of contents
 
 * [HackTricks](README.md)
-* [Pentesting Methodology](pentesting-methodology.md)
-* [External Recon Methodology](external-recon-methodology.md)
-* [About the author](about-the-author.md)
-* [Exfiltration](exfiltration.md)
-* [Tunneling and Port Forwarding](tunneling-and-port-forwarding.md)
-* [Brute Force - CheatSheet](brute-force.md)
-* [Search Exploits](search-exploits.md)
+* [Pentesting Methodology](general/pentesting-methodology.md)
+* [External Recon Methodology](general/external-recon-methodology.md)
+* [About the author](general/about-the-author.md)
+* [Exfiltration](general/exfiltration.md)
+* [Tunneling and Port Forwarding](general/tunneling-and-port-forwarding.md)
+* [Brute Force - CheatSheet](general/brute-force.md)
+* [Search Exploits](general/search-exploits.md)
 
 ## Shells
 
