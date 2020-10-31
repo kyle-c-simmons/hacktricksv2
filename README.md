@@ -1,4 +1,5 @@
-# HackTricks
+# HackTricks Modified 
+All server-side templating has been removed from the original HackTricks gitbook repo. This project can be run with the 'gitbook serve' command.
 
 
 

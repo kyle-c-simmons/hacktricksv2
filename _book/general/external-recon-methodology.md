@@ -209,7 +209,7 @@ sed 's/$/.domain.com/' subdomains.txt > bf-subdomains.txt
 grep -E "tesla.com. [0-9]+ IN A .+" /tmp/results.txt
 ```
 
-Gobuster bruteforcing dns" %}
+Gobuster bruteforcing dns
 ```bash
 gobuster dns -d mysite.com -t 50 -w subdomains.txt
 ```
